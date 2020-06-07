@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 12,
+      "title": "json-server2",
+      "author": "typicode2"
+    },
+    {
+      "id": 123,
+      "title": "json-server23",
+      "author": "typicode23"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 2,
+      "name": "Beta",
+      "age": 19,
+      "address": "Nurem"
+    },
+    {
+      "id": 3,
+      "name": "Cyder",
+      "age": 20,
+      "address": "Frank"
+    },
+    {
+      "id": 4,
+      "name": "Dilun",
+      "age": 21,
+      "address": "Gita"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
