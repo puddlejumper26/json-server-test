@@ -10,12 +10,16 @@ import { NzModalService, NzModalRef } from 'ng-zorro-antd';
 export class TableComponent implements OnInit {
   // list data
   listData = [];
+  // edit data
+  editData = {};
+  // simulate dialog
+  modalIsVisible: boolean = false;
   // dialog
   confirmModal: NzModalRef;
 
   constructor(private http: HttpClient, private modal: NzModalService) {}
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.getListData();
   }
 
@@ -29,10 +33,16 @@ export class TableComponent implements OnInit {
   }
 
   // add
-  addPeople() {}
+  addPeople() {
+    this.editData = {};
+    this.modalIsVisible = true;
+  }
 
   // edit
-  edit(data: Object) {}
+  edit(data: Object) {
+    this.editData = data;
+    this.modalIsVisible = true;
+  }
 
   //delete
   delete(data: Object) {
@@ -49,5 +59,10 @@ export class TableComponent implements OnInit {
           });
       },
     });
+  }
+
+  // new add
+  clickEvent(){
+    this.getListData();
   }
 }
