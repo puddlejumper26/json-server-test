@@ -93,6 +93,11 @@ Now under the root, there is a **`data.json`** file, which could be modified man
 
 we use the `/users` here in this app simulation
 
+2. run 
+- `ng serve` - to run the angular app on the local, now there is no data to fetch 
+![image](https://user-images.githubusercontent.com/40550117/83990771-52009f00-a97d-11ea-85a9-11b71049f537.png)
 
+- and then `json-server --watch data.json` - this step is to generate local data, and then the angular app could fetch from here.
 
+![image](https://user-images.githubusercontent.com/40550117/83990738-3bf2de80-a97d-11ea-8a18-92d2eebc4198.png)
 
