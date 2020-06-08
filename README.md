@@ -11,9 +11,12 @@
 # Installation
 
 - `npm i -g json-server` 
+- `json-server -v` to check the version and whether it is installed successfully
 - `json-server data.json` or `json-server --watch data.json`
 
-Now under the root, there is a **`data.json`** file, which could be modified manuelly, but then need to run the `json-server data.json` again.
+- Now under the root, there is a **`data.json`** file, which could be modified manuelly, but then need to run the `json-server data.json` again.
+
+- if we use `db.json`, then a **`db.json`** is created instead of **`data.json`**
 
 ![image](https://user-images.githubusercontent.com/40550117/83990354-f386f100-a97b-11ea-8d3f-b1015c1cc363.png)
 
