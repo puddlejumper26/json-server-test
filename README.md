@@ -8,6 +8,12 @@
 
 - Github link - https://github.com/typicode/json-server#json-server--
 
+
+# Frame + Tool
+- Angular
+- ng-zorro
+- json-server
+
 # Installation
 
 - `npm i -g json-server` 
