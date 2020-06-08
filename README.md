@@ -1,4 +1,4 @@
-# json-server-test
+<h1 align="center"> json-server-test</h1>
 - Using json-server to simulate the `GET`, `DELETE`, `POST`, `PUT` function from the backend
 - Through a normal `Angular APP`
 
