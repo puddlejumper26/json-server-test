@@ -1,10 +1,10 @@
 <h1 align="center"> json-server-test</h1>
-- Using json-server to simulate the `GET`, `DELETE`, `POST`, `PUT` function from the backend
+- Using json-server to simulate the `GET`, `DELETE`, `POST`, `PUT` function
 - Through a normal `Angular APP`
 
 
 # What is **json-server**
-- This is a mock tool, `mock server`, mock data from the backend server. It could be used to build a local JSON service, and generate testing data.
+- This is a mock tool, `mock server`, mock data. It could be used to build a local JSON service, and generate testing data.
 
 - Github link - https://github.com/typicode/json-server#json-server--
 
