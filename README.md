@@ -1,27 +1,136 @@
-# JsonServerTest
+<h1 align="center"> json-server-test</h1>
+- Using json-server to simulate the `GET`, `DELETE`, `POST`, `PUT` function
+- Through a normal `Angular APP`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-## Development server
+# What is **json-server**
+- This is a mock tool, `mock server`, mock data. It could be used to build a local JSON service, and generate testing data.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Github link - https://github.com/typicode/json-server#json-server--
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Frame + Tool
+- Angular
+- ng-zorro
+- json-server
 
-## Build
+# Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- `npm i -g json-server` 
+- `json-server -v` to check the version and whether it is installed successfully
+- `json-server data.json` or `json-server --watch data.json`
 
-## Running unit tests
+- Now under the root, there is a **`data.json`** file, which could be modified manuelly, but then need to run the `json-server data.json` again.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- if we use `db.json`, then a **`db.json`** is created instead of **`data.json`**
 
-## Running end-to-end tests
+![image](https://user-images.githubusercontent.com/40550117/83990354-f386f100-a97b-11ea-8d3f-b1015c1cc363.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+# Application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Input original data in `data.json`
+```json
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 12,
+      "title": "json-server2",
+      "author": "typicode2"
+    },
+    {
+      "id": 123,
+      "title": "json-server23",
+      "author": "typicode23"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 2,
+      "name": "Beta",
+      "age": 19,
+      "address": "Nurem"
+    },
+    {
+      "id": 3,
+      "name": "Cyder",
+      "age": 20,
+      "address": "Frank"
+    },
+    {
+      "id": 4,
+      "name": "Dilun",
+      "age": 21,
+      "address": "Gita"
+    },
+    {
+      "name": "Alpha",
+      "age": "18",
+      "address": "HUoHUo",
+      "id": 5
+    },
+    {
+      "name": "jj",
+      "age": "llll",
+      "address": "hj",
+      "id": 6
+    },
+    {
+      "name": "rrr",
+      "age": "",
+      "address": "eee",
+      "id": 7
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
+```
+
+we use the `/users` here in this app simulation
+
+2. run the following commands in order
+
+- `ng serve` - to run the angular app on the local, now there is no data to fetch 
+![image](https://user-images.githubusercontent.com/40550117/83990771-52009f00-a97d-11ea-85a9-11b71049f537.png)
+
+- and then `json-server --watch data.json` - this step is to generate local data, and then the angular app could fetch from here.
+```
+PS D:\Angular\json-server-test> json-server --watch data.json     
+
+  \{^_^}/ hi!
+
+  Loading data.json
+  Done
+
+  Resources
+  http://localhost:3000/posts
+  http://localhost:3000/comments
+  http://localhost:3000/users
+  http://localhost:3000/profile
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database 
+  Watching...
+  ```
+
+
+![image](https://user-images.githubusercontent.com/40550117/83990738-3bf2de80-a97d-11ea-8a18-92d2eebc4198.png)
+
+
+3. When click **`Add`**, **`Delete`** or **`Edit`** button and confirm the changes, then the original data in `data.json` will be modified simutaneously.
