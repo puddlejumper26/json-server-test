@@ -23,7 +23,7 @@ export class TableComponent implements OnInit {
     this.getListData();
   }
 
-  //obtain list data
+  //obtain data from localhost:3000/users, and give it to listData
   getListData() {
     this.http
       .get('http://localhost:3000/users')
@@ -55,6 +55,7 @@ export class TableComponent implements OnInit {
         this.http
           .delete('http://localhost:3000/users/' + data['id'])
           .subscribe((res) => {
+            //after delete the data inside localhost:3000/users/, then ask to run getListData() again to obtain the updated data
             this.getListData();
           });
       },
