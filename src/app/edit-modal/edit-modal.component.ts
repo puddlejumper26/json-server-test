@@ -24,7 +24,7 @@ export class EditModalComponent implements OnInit {
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.validateForm = this.fb.group({
       name: [null, [Validators.required]],
-      age: [null, [Validators.required]],
+      age: [null ],
       address: [null, [Validators.required]],
     });
   }
@@ -79,12 +79,14 @@ export class EditModalComponent implements OnInit {
     }
 
     if (this.isEdit) {
+      //PUT is edit
       this.http
         .put('http://localhost:3000/users/' + this.data['id'], params)
         .subscribe((res) => {
           this.clickEvent.emit();
         });
     } else {
+      // POST is add new
       this.http.post('http://localhost:3000/users', params).subscribe((res) => {
         this.clickEvent.emit();
       });
